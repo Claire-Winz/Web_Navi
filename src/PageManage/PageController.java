@@ -1,16 +1,15 @@
 package PageManage;
 
+import Controller.Controller;
 import Controller.Scan;
 
 public class PageController {
 
     Page page = new Page();
 
-    Scan scan = new Scan();
-
     public void visit() {
         page.backPage.push(page.getURL());
-        page.pageURL = scan.sc.next();
+        page.pageURL = Controller.scan.sc.next();
         page.forwardPage.clear();
         System.out.println(page.getURL());
     }

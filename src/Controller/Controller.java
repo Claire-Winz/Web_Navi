@@ -5,7 +5,7 @@ import PageManage.*;
 public class Controller {
 
     PageController pc = new PageController();
-    Scan scan = new Scan();
+    public static Scan scan = new Scan();
 
     public void run() {
 
