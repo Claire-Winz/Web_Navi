@@ -10,7 +10,7 @@ public class PageController {
 
     public void visit() {
         page.backPage.push(page.getURL());
-        page.pageURL = scan.sc.nextLine();
+        page.pageURL = scan.sc.next();
         page.forwardPage.clear();
         System.out.println(page.getURL());
     }
