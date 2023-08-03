@@ -1,0 +1,44 @@
+public class Assignment_5 {
+
+    public static void main(String[] args) {
+        Stack<String> back = new Stack();
+        Stack<String> forward = new Stack();
+        Stack<String> now = new Stack();
+        now.push("http://www.acm.org/");
+        Scanner sc = new Scanner(System.in);
+        boolean run = true;
+
+        while(run) {
+            switch (sc.next()) {
+                case "VISIT":
+                    back.push(now.pop());
+                    now.push(sc.next());
+                    forward.clear();
+                    System.out.println((String)now.peek());
+                    break;
+                case "BACK":
+                    if (back.empty()) {
+                        System.out.println("Ignored");
+                    } else {
+                        forward.push(now.pop());
+                        now.push(back.pop());
+                        System.out.println((String)now.peek());
+                    }
+                    break;
+                case "FORWARD":
+                    if (forward.empty()) {
+                        System.out.println("Ignored");
+                    } else {
+                        back.push(now.pop());
+                        now.push(forward.pop());
+                        System.out.println((String)now.peek());
+                    }
+                    break;
+                case "QUIT":
+                    run = false;
+                    break;
+            }
+        }
+
+    }
+}
