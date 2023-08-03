@@ -1,16 +1,16 @@
 package PageManage;
 
-import PageManage.*;
-import java.util.Scanner;
+import Controller.Scan;
 
 public class PageController {
 
-    public Scanner sc = new Scanner(System.in);
     Page page = new Page();
+
+    Scan scan = new Scan();
 
     public void visit() {
         page.backPage.push(page.getURL());
-        page.pageURL = sc.next();
+        page.pageURL = scan.sc.nextLine();
         page.forwardPage.clear();
         System.out.println(page.getURL());
     }

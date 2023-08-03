@@ -5,13 +5,14 @@ import PageManage.*;
 public class Controller {
 
     PageController pc = new PageController();
+    Scan scan = new Scan();
 
     public void run() {
 
         boolean run = true;
 
         while(run) {
-            switch (pc.sc.next()) {
+            switch (scan.sc.next()) {
                 case "VISIT":
                     pc.visit();
                     break;
