@@ -8,7 +8,6 @@ public class PageController {
     public Scanner sc = new Scanner(System.in);
     Page page = new Page();
 
-
     public void visit() {
         page.backPage.push(page.getURL());
         page.pageURL = sc.next();
